@@ -12,7 +12,7 @@ A simple note-taking app built with Expo and React Native.
 
 ## Demo Video
 
-<video controls src="assets/notes-ui-app-video.mp4" title="Title"></video>
+https://youtube.com/shorts/QaE8L_eLq5E
 
 ## Quick Start
 
