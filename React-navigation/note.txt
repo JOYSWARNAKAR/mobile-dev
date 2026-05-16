@@ -1,0 +1,15 @@
+types of navigator
+1. stack
+2. Tabs
+3. Drawer
+
+// popToTop() Go to a screen by name.
+// goBack() Go back to the previous screen in the stack.
+// popToTop() Go to the first screen in the stack.
+// navigate() Go to a screen by name, and pass params to it.
+// push() Always adds a new screen to the stack, even if it is already on top of the stack.
+// replace() Replace the current screen with another one, and reset the navigation history. --> SplashScreen --> HomeScreen, and you won't be able to go back to the SplashScreen.
+// popTo() Go to a screen by name, and remove all the screens on top of it.
+// reset() Replace the current state with a new state, and navigate to it.
+// navigate() and push() are similar, but navigate() will not add a screen to the stack if it is already on top of the stack, while push() will always add a new screen to the stack.
+// For example, if you are on the Home screen and you call navigate('Home'), it will not do anything because you are already on the Home screen. However, if you call push('Home'), it will add a new Home screen to the stack, and you will have two Home screens in the stack.
