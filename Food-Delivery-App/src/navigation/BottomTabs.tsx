@@ -1,6 +1,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import { Ionicons } from '@expo/vector-icons';
+
 import HomeStack from './HomeStack';
 
 import SearchScreen from '../screens/SearchScreen';
