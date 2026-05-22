@@ -1,4 +1,4 @@
-const linking = {
+const linking: any = {
   prefixes: ['foodapp://'],
 
   config: {
