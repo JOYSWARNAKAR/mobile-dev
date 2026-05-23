@@ -24,6 +24,7 @@ import {
 } from '@react-navigation/native';
 import { Button } from '@react-navigation/elements';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import DynamicTabNavigator from './src/navigator/tabs/DynamicTabNavigator';
 
 function HomeScreen() {
   const navigation = useNavigation();
@@ -59,5 +60,5 @@ const MyTabs = createBottomTabNavigator({
 const Navigation = createStaticNavigation(MyTabs);
 
 export default function App() {
-  return <Navigation />;
+  return <DynamicTabNavigator/>;
 }
