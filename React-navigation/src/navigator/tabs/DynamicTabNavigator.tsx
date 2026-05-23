@@ -36,16 +36,35 @@ const Tab = createBottomTabNavigator();
 function MyTabs() {
     return (
         <Tab.Navigator initialRouteName='Search'
-         screenOptions={{
-          headerShown : false
-         }} >
+         screenOptions={
+          ({route}) => ({
+            tabBarStyle: {
+              height: 90,
+              paddingBottom: 8
+            },
+            tabBarActiveTintColor: "tomato",
+            // tabBarInactiveTintColor : "green",
+            tabBarIcon: ({focused, color, size}) => {
+              const icon = route.name === 'Home'
+              ? focused ? "home" : "home-outline"
+              : route.name === 'Search'
+              ? focused ? "search" : "search-outline"
+              // : focused ? "person" : "person-outline"
+              : focused ? "chatbubble" : "chatbubble-outline"
+
+              return <Ionicons name= {icon} size={size} color={color} />
+            }
+          })
+         }>
+
+
             <Tab.Screen name= 'Home' component={HomeScreen}
-            options={{
-              title: "Dashboard",
-              tabBarLabel: "Start"
-            }} />
+             />
             <Tab.Screen name= 'Search' component={SearchScreen} />
-            <Tab.Screen name= 'Profile' component={ProfileScreen} />
+            <Tab.Screen name= 'Profile' component={ProfileScreen}
+            options={{
+              tabBarBadge: 3
+            }} />
         </Tab.Navigator>
     )
 }
