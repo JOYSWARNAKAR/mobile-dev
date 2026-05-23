@@ -11,7 +11,22 @@ const Stack = createNativeStackNavigator()
 function MyStack() {
     return(
         <Stack.Navigator>
-            <Stack.Screen name = 'Home' component = {HomeScreen} />
+            <Stack.Screen name = 'Home' component = {HomeScreen} 
+            options={{
+                headerShown :true,
+                title : "Dashboard",
+                headerStyle : {
+                    backgroundColor : "rgba(43, 41, 43, 0.66)",
+                },
+                headerTitleAlign: "center",
+                headerTintColor : "orange",
+                headerTitleStyle:{
+                    fontWeight: "bold",
+                    fontSize: 22, 
+                }
+
+
+                }} />
             <Stack.Screen name = 'Details' component = {DetailScreen} />
             <Stack.Screen name = 'Profile' component = {ProfileScreen} />
 
@@ -22,7 +37,7 @@ function MyStack() {
 export default function DynamicStackNavigator() {
     return (
        <NavigationContainer>
-        
+
         <MyStack />
 
        </NavigationContainer>
