@@ -34,8 +34,15 @@ const Tab = createBottomTabNavigator();
 
 function MyTabs() {
     return (
-        <Tab.Navigator>
-            <Tab.Screen name= 'Home' component={HomeScreen} />
+        <Tab.Navigator initialRouteName='Search'
+         screenOptions={{
+          headerShown : false
+         }} >
+            <Tab.Screen name= 'Home' component={HomeScreen}
+            options={{
+              title: "Dashboard",
+              tabBarLabel: "Start"
+            }} />
             <Tab.Screen name= 'Search' component={SearchScreen} />
             <Tab.Screen name= 'Profile' component={ProfileScreen} />
         </Tab.Navigator>
