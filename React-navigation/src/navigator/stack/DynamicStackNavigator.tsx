@@ -23,7 +23,8 @@ function MyStack() {
                 headerTitleStyle:{
                     fontWeight: "bold",
                     fontSize: 22, 
-                }
+                },
+                animation: "flip"
         }}>
             <Stack.Screen name = 'Home' component = {HomeScreen} 
             options={{

@@ -11,7 +11,13 @@ const Stack = createNativeStackNavigator({
   // initialRouteName: 'Home',
   
   screens : {
-    Home: HomeScreen,
+    Home: {
+      screen : HomeScreen,
+      options: {
+        // add colours and animation properties like dynamicStack
+        
+      }
+    },
     Details: DetailScreen,
     Profile: ProfileScreen
   }
